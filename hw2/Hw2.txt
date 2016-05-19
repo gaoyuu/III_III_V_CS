@@ -1,0 +1,58 @@
+Exercise 4.1: Largest radix-r numberProve, using induction, that for radix-r, the largest number that can be represented with N digits is rN − 1.
+basic: 	for n=0, r^0-1=1-1=0, 	which satisfy the condition
+	for n=1, r^1-1=r-1,	which also satisfy the condition
+inductive hypothesis: if n=k, the largest number that can be represented with k digits is r^k-1,
+			for (k+1) digits, the largest number is obtained by r^k-1 shift to left and add (r-1),(r-1)is the largest number for 1 digit. (r^k-1)*r+(r-1)=(r^(k+1)-r+r-1)=r^(k+1)-1
+Hence is proved.
+
+Exercise 4.2: Carry BitsProve that for radix-r addition, the carry bits are always 0 or 1.
+For addition of 2 radix-r numbers, the largest number of 1 digit is r-1, (r-1)+(r-1)=2*r-2 for r={0,1,2,3,4,5,6,7,8,9},the largest result is 18 and the carry is 1,and for the smallest number 0 ,0+0=0 with carry 0.
+
+Exercise 4.3: Two’s Complement Number RangeGiven the formal definition, derive the minimum and maximum two’s complement numbers that can be represented in N bits.
+for N bits with signs
+largest: summation of (2^(i), i<=n-1),which is also (2^(n)-1
+smallest:(-)(2^(n))
+(2^(n))-1+(2^(n))=(2^(n+1)-1) which is total numbers represented by N bits for unsigned numbers
+
+Exercise 4.4: Two’s Complement Operation
+for a two’s complement number, flip each bit and add two numbers together will get a (N-1)-bit number with 1 at each bit,
+they are kind of a pair of numbers for (N-1)-bit number, total number of numbers can be represented by (N-1) bits is 2^(n). for (0000 0000)(base2)=0(base10),(1111 1111)(base2)=(-1)(base10)is a pair…… (0111 1111)(base2)=127(base10),(1000 0000)(base2)=(-128)(base10)is a pair. there is a one-to-one rule that the absolute value of each pair of numbers sum to 2^N-1
+
+Exercise 4.5: Sign Extension
+No matter how many signs will be extended,for positive numbers the left part 0s would not affect the result converted to decimal,a negative number is also converted to decimal by flip each bit and add one to get the absolute value, left part 0s also would not affect the result. The values would be preserved.
+
+6.
+	2|107–-1		2|2312__0		2|31333__1			2|97__1
+	2| 53–-1		2|1156__0		2|15666__0			2|48__0
+	2| 26—-0		2| 578__0		2| 7833__1			2|24__0
+	2| 13—-1		2| 289__1		2| 3916__0			2|12__0
+	2|  6—-0		2| 144__0		2| 1958__0			2| 6__0
+	2|  3—-1		2|  72__0		2|  979__1			2| 3__1
+	2|  1—-1		2|  36__0		2|  489__1			2| 1__1
+	107—>1101011		2|  18__0		2|  244__0			97->1100001
+				2|   9__1		2|  122__0
+				2|   4__0		2|   61__1
+				2|   2__0		2|   30__0
+				2|   1__1		2|   15__1
+				2312->100100001000	2|    7__1
+					 		2|    3__1
+					 		2|    1__1
+							31333->111101001100101
+			(discard final carry)				(discard final carry)
+7.	0 1		  1 1	 		  1			1 1 1
+	1 0 3		1 0 2 7			1 2 9			2 2 2 2
+	  0 7		    8 8			  6 6			  7 7 7
+  +	    1	   +	      1  	+	    1  		+	      1
+———————————————————————————————————————————————————————————————————————————————————————————————
+	  1 1		1 0 1 6			  9 6			2 0 0 0
+
+8.	
+	2|90__0			2|95__1			2|125__1		2|101__1		2| 78__0
+	2|45__1			2|47__1			2| 62__0		2| 50__0		2| 39__1
+	2|22__0			2|23__1			2| 31__1		2| 25__1		2| 19__1
+	2|11__1			2|11__1			2| 15__1		2| 12__0		2|  9__1
+	2| 5__1			2| 5__1			2|  7__1		2|  6__0		2|  4__0
+	2| 2__0			2| 2__0			2|  3__1		2|  3__1		2|  2__0
+	2| 1__1			2| 1__1			2|  1__1		2|  1__1		2|  1__1
+	 90-> 1011010		 95-> 1011111		 125-> 1111101		101->01100101		78->01001110
+	-91->10100101		-96->10100000		-126->10000010

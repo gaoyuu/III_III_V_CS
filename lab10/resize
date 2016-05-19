@@ -1,0 +1,3 @@
+convert -resize 128x160! input.jpg output.jpg
+
+jpegtopnm output.jpg |ppmtobmp > output.bmp

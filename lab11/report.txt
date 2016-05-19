@@ -1,0 +1,7 @@
+Yu Gao(gaoyu)
+
+difficulties:
+it is hard to deal with a circular queue which I did not know what it is before.
+
+What I learnt:
+I have learnt how to deal with a circular queue with enqueue and dequeue and polling and intterupt.

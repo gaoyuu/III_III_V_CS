@@ -1,0 +1,21 @@
+Yu Gao
+1.    Discuss the advantages and disadvantages of printf debugging? 
+	printf can show where I may have the error and I can fix it.
+	but it is slow.
+
+    Explain why the spiReadWrite function is called inside a higher level peripheral function (the lcdWrite function).
+	it should be initialled before it is used.
+	
+    Why does LCD_CS_DEASSERT() do? Why is it important?
+	
+	this have the function of setting connection to HIGH
+
+    Explain how the character data from the ASCII array in glcdfont.c gets converted to pixels.
+	
+	ASCII[c*5 + i], c is unsigned char, i has the value from 0 to 5
+
+    Give the exact timing difference between the two versions of f3d_lcd_fillScreen, from the Salae analyzer, and explain why the new function is faster.
+
+	it is 76 ms, as the screenshots show.
+
+	Difficulties: had trouble in push color to the bar chartds, create a function createtriangular to solve it.

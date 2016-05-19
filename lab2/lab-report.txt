@@ -1,0 +1,10 @@
+Yu Gao(gaoyu)
+Results: What did you accomplish? What worked, and what didn't?
+	learn how to use gdb. 
+	write my version of printf and words-count which performs wc 
+command.
+gdb is quite new material for me and it takes time to learn how to use it 
+
+1: %s is for string; %d is for int; %x is for hexadecimal
+2: gcc -g -o test command 
+3: < command 

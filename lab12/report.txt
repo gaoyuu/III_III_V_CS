@@ -1,0 +1,21 @@
+Yu Gao(gaoyu)
+
+Q1. What is the significance of the peripheral base address? Where does it point? 
+
+Its the address of prephrial that is being used by DMA, it points to thedata from the prephrial.
+
+Q2. Why is it necessary to enable incrementing as was done in this step? What will the DMA controller do in response to this configuration.
+
+It can access the data as reading through an array, go to each new memory location, you do this if you need to read data from more than one DR register
+
+Q3. Why is this line of the code necessary?
+
+This code is waiting for a completion flag to be passed.
+
+Q4. For transfers of less than 4 bytes, what do you think is the reason for not using the xchng_datablock functions?
+
+DMA makes it more efficient to operate on less than 4 bytes.
+
+difficulties: quite can not fingure out what do the "new" codes do.
+
+learn: how to play wav file on the board

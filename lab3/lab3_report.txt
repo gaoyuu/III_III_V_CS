@@ -1,0 +1,7 @@
+Name: 		Yu Gao(gaoyu) and John Barnes- McKivigan(jbarnesm)
+Results:	a make file that do connecting poly.c and dump.c.
+		poly.c is a given file and dump.c is to type the corresponding data of given address
+Difficulties: 	Not every address asigns a short, integer, float and double float, so it needs if statement to
+		only return ones which have these types of data
+learn:		I have learnt how makefile is going to be and its function.
+		And how to call the data corresponded to the address.

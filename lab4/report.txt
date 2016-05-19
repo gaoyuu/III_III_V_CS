@@ -1,0 +1,50 @@
+/**********************************************************
+ * dump_memory.c
+ *
+ *
+ * Author: gaoyu
+ * Date Created: 2016/1/29
+ * Last Modified by: 2016/1/29
+ * Date Last Modified: 2016/1/29
+ * Assignment: lab3
+ * Part of: lab3
+ */
+
+ 
+1) What are specs of the board you are using (ex. Speed, RAM, Flash)?
+
+board: Cortex-M4
+Speed: 72 MHz
+RAM: up to 48 -Kbyte SRAM
+flash: 64- to 256- Kbyte
+
+
+2) What does GPIO stand for?
+
+General-Purpose Input/Output
+
+3) Is the provided delay function accurate? Why or why not?
+
+I think it is not. The delay time depends on the execute speed of different computers.
+
+4) What are the Port and Pin Numbers of the two Green LEDs?
+
+Pin: E
+Number: 11 and 15
+
+5) What are the public attributes of the GPIO_InitTypeDef Struct?
+
+unit32_t		GPIO_Pin
+GPIOMode_TypeDef	GPIO_Mode
+GPIOSpeed_TypeDef	GPIO_Speed
+GPIOPuPe_TypeDef	GPIO_PuPd
+GPIOOType_TypeDef	GPIO_OType
+
+Difficulties:
+It was quite new for me to see the graph illustrating the board, I could not find
+
+how to link each port.
+
+I also did not get what the functions of those attributes are.
+
+But when I went deep step by step, I figured out these confusions.

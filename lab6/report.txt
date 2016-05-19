@@ -1,0 +1,27 @@
+Yu Gao
+
+What does the CS pin do (the CS pin is called SS in the lab manual)?
+It is used to enable the correct device for communication.
+
+Why do you set the CS high at the end of the pin initializations? What other functions in f3d_gyro.c change CS from low to high or high to low?
+Because it is easy to communicate with low ones.
+
+read&&write function also use set high
+
+How do you hook up multiple peripherals on one SPI bus?
+To talk to a particular slave, the slave’s SS line should keep low and the rest of them should be high.
+Lots of slaves will require lots of SS lines
+For MISO, connect to the MOSI of the next. In this case, a single SS line goes to all the slaves.
+
+The STM has an Operating Frequency of 72 MHz. When initializing SPI1, what do you set the baud rate prescaler to? What is the resulting SPI clock frequency?
+A prescalar of 8 results in a 3MHz SPI clock.
+we use prescaler of 64, 8, and 2 for slow, medium and fast speeds.
+
+Does a peripheral (slave) need to be configured with the transmission speed before it can communicate with the microcontroler (master)? Why would you want to be able to do on-the-fly changes in transmission speed?
+Yes.
+Because I need to see the changes in clearly.
+
+
+Describe what you learned and any difficulties you had :
+I have learned differences between unsigned numbers and two's complement numbers and how 
+to operate on two's complement numbers.

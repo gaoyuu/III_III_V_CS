@@ -1,0 +1,5 @@
+1:	Yu Gao(gaoyu)
+2:	build my github acount and ssh key;
+	submit 'helloworld' c file 
+3:	
+4:	how to submit my homework to github

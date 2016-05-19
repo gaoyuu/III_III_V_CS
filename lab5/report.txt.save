@@ -1,0 +1,23 @@
+Yu Gao
+
+How many connections are required to communicate over UART?
+
+
+What is the purpose of "alternate functions" for GPIO pins?
+Alternate' functions would refer to other functions, that may include 
+clock, uart and etc.
+
+Define "baud rate" in your own words.
+baud rate refers to the number of times per second that a system, 
+especially a data transmission channel, changes state
+
+Why do we need newlib_stubs? Specifically, is there a reason that printf won't work on the board 
+without it?
+
+
+Give an example of a situation in which the Salae Logic Analyzer is the best debugging method and 
+include a screen shot of the Logic application.
+
+
+
+What did you learn, any difficulties you had [5]:

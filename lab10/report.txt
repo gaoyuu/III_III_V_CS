@@ -1,0 +1,21 @@
+gaoyu(gaoyu)
+1: What are we doing here and how does it relate to what we know about SPI?
+   We are setting up a way to easily set the SD card reader from High to low so we can use it.
+
+2:  Explain how you might use the *f3d_delay_uS()* function
+  within the *delay()* function to replace the delay loop
+  below. What would you expect to be the advantage of using a
+  timer over a delay loop?
+    I think it may make the time more accurate.
+
+3: Why might DMA be important in improving the performance of your image display application?
+   DMA frees up processor resources, for graphical applications it means we can use outside memory like SD cards and pull from there for our application rather than storing on the boards flash memory.
+
+4: Explain how the corruption of an entry in the table can cause part of a file to be lost.
+   Entries in the table which contain data and also link to other entries in the file system
+   So if part of an entry is lost, the whole entry just may lose, either
+
+5: What is the difference between FAT16 and FAT32? 
+   Fat32 can more efficently allocate diskspace and work with more disk sizes than fat16.
+
+dificulties: rc(3) error and we cannot finish the lab for the part which requires us to change the display of images according to the pitch and roll.
